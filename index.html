@@ -1,35 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - CorroSolve</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #0078D7; }
-        h2 { color: #2b2b2b; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
-        p { margin-bottom: 15px; }
-    </style>
-</head>
-<body>
-    <h1>Privacy Policy for CorroSolve</h1>
-    <p><strong>Publisher:</strong> Ali ALalama</p>
-    <p><strong>Last updated:</strong> October 27, 2026</p>
+ملخّص: يعمل تطبيق CorroSolve محلياً بالكامل (Offline) على جهازك. لا يقوم التطبيق بجمع أي بيانات شخصية، ولا بنقل أي بيانات أو نتائج اختبارات إلى خوادم خارجية، ولا يتطلب اتصالاً بالإنترنت لأداء وظائفه.
 
-    <h2>1. Introduction</h2>
-    <p>CorroSolve is a professional, offline-first engineering calculator designed specifically for metallurgical engineers, materials scientists, and researchers. Built to align with ASTM and NACE standards, it provides a comprehensive suite of tools for corrosion analysis, material evaluation, and data visualization.</p>
+تصدير الملفات: يعرض التطبيق مربّع اختيار مسار الحفظ عند كل تصدير، ويبدأ من مجلد Documents\CorroSolve\Reports — فالوجهة النهائية تختارها أنت. لا يرفع التطبيق أي ملف تلقائياً.
 
-    <h2>2. Data Collection and Security</h2>
-    <p>Strictly operating entirely offline with no network dependencies, CorroSolve ensures that all your sensitive engineering data, sample records, and project files remain 100% locally stored on your device for maximum security.</p>
-    <p>The application <strong>does not</strong> collect, store, transmit, or share any personal information, user data, or telemetry data with the publisher or any third parties.</p>
+«مسح كل السجل» يحذف سجلات نتائج التآكل فقط؛ أما المشاريع والاختبارات المحفوظة فتُحذف بحذف مجلد %LOCALAPPDATA%\CorroSolve يدوياً.
+1) نطاق التطبيق
+تنطبق هذه السياسة على تطبيق CorroSolve (“التطبيق”) المنشور من قبل Ali ALalama (“الناشر”) والمتاح عبر متجر Microsoft.
 
-    <h2>3. Required Permissions</h2>
-    <p>The application only requests the minimum local permissions necessary to function on your Windows system. Because it operates completely offline, it does not access your internet connection, nor does it access your microphone, camera, or location.</p>
+2) طبيعة التطبيق (Offline-First)
+التطبيق مُصمَّم ليعمل على جهاز المستخدم وحده:
 
-    <h2>4. Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time to comply with Microsoft Store policies or reflect changes in the app. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+لا يجمع التطبيق أي بيانات تعريفية أو بيانات شخصية (لا اسم، لا بريد إلكتروني، لا معرّف جهاز).
+لا ينقل التطبيق أي بيانات أو نتائج اختبارات أو مشاريع إلى أي خادم خارجي.
+لا يتطلب التطبيق اتصالاً بالإنترنت لتشغيل أي من وظائفه.
+لا يحتوي التطبيق على أي تحليلات (analytics) أو إعلانات أو تتبّع.
+3) البيانات التي تُحفظ محلياً
+يعمل التطبيق على تخزين البيانات التالية على جهازك فقط، داخل مجلد التطبيق الخاص في %LOCALAPPDATA%\CorroSolve\:
 
-    <h2>5. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact the developer through the Microsoft Store support channels.</p>
-</body>
-</html>
+مشاريعك واختبارات التآكل (اسم العينة، الأبعاد، المعدن، الكثافة، الزمن، معدل التآكل) في قاعدة بيانات SQLite محلية.
+إعدادات العرض (لغة الواجهة، المظهر، المرجع القياسي المعتمد) في ملف settings.json.
+سجل الأخطاء (crash.log) عند حدوث عطل، ويمكنك حذفه في أي وقت.
+هذه البيانات لا تغادر جهازك، ويمكنك حذفها بالكامل عبر حذف المجلد أو باستخدام زر «مسح السجل بالكامل» داخل التطبيق.
+
+4) ملفات التصدير
+عند تصدير تقرير PDF أو ملف Excel، يختار أنت مكان الحفظ واسم الملف، ويُحفظ الملف في المكان الذي تختاره أنت على جهازك. لا تُرسل هذه الملفات إلى أي جهة خارجية، ولا يتحكّم فيها التطبيق بعد تصديرها.
+
+5) الصلاحيات
+يطلب التطبيق صلاحية runFullTrust فقط — وهي صلاحية تنفيذ تطبيق سطح مكتب داخل حزمة MSIX، وليست صلاحية وصول إلى الإنترنت أو الشبكة. لا توجد أي صلاحيات شبكة (إنترنت/شبكة محلية) في التطبيق.
+
+6) الأطفال
+التطبيق أداة هندسية فنية لا تجمع بيانات شخصية، ويصلح للاستخدام من قِبل المهندسين والفنيين؛ وليس موجّهاً للأطفال.
+
+7) التعديلات على هذه السياسة
+قد تُحدَّث هذه السياسة عند إصدار نسخة جديدة. تاريخ آخر تحديث: 26 أكتوبر 2026. يُنصح بمراجعة هذه الصفحة قبل استخدام التطبيق.
+
+Privacy Policy — CorroSolve
+Summary: CorroSolve runs fully offline on your device. It does not collect any personal data, does not transmit any data or test results to external servers, and requires no internet connection for any of its features.
+
+1) Scope
+This policy applies to the CorroSolve app published by Ali ALalama and distributed through the Microsoft Store.
+
+2) Offline-first design
+The app does not collect any personal data or identifying information.
+The app does not transmit any data, projects or test results to any external server.
+The app does not require an internet connection to function.
+The app contains no analytics, advertising or tracking.
+3) Locally stored data
+All data is stored locally on your device under %LOCALAPPDATA%\CorroSolve\: your projects and corrosion test records (SQLite database), display settings (language, theme, governing standard) in settings.json, and a crash log (crash.log) if a fault occurs. None of this leaves your device, and you can delete it at any time.
+
+4) Exported files
+When you export a PDF report or an Excel workbook, you choose the destination folder and file name. Those files are saved where you asked, and are never sent anywhere by the app.
+
+5) Permissions
+The app declares only the runFullTrust capability, which is required for any desktop app packaged as MSIX. No network or internet capability is declared.
+
+6) Children
+CorroSolve is a professional engineering utility that collects no personal data; it is not directed at children.
+
+7) Changes
+This policy may be updated with new releases. Last updated: 26 October 2026.
+
+CorroSolve — منصة حسابات التآكل الهندسية · © 2026 Ali ALalama
